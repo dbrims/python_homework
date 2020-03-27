@@ -36,32 +36,30 @@ sales_item=[]
 sales_quantity=[] 
 sales_len=len(sales) 
 
-
-for i in range(3, sales_len, 5):
-    sales_quantity.append(int(sales[i]))
-for i in range(4,sales_len, 5):
-    sales_item.append(sales[i])
+for ele in range(3, sales_len, 5):
+    sales_quantity.append(int(sales[ele]))
+for ele in range(4,sales_len, 5):
+    sales_item.append(sales[ele])  
 
 for item in sales_item:
     if item not in report:
         report[item]={}
         for m in metrics:
             report[item][m]=0
-
          
 menu_item=[]
 cost=[]
 price=[]
-for r in menu:
-    for item in range(len(r)):
+for row in menu:
+    for item in range(len(row)):
         if item==0:
-            menu_item.append(r[item])
+            menu_item.append(row[item])
 
         elif item==3:
-            price.append(float(r[item]))
+            price.append(float(row[item]))
     
         elif item==4:
-            cost.append(float(r[item]))           
+            cost.append(float(row[item]))           
             
 len_items=len(menu_item)
 len_sales_item=len(sales_item)
@@ -80,10 +78,10 @@ for x in range(len_sales_item):
         print(f"{sales_item} does not equal {menu_item}! NO MATCH!")
         
 
-f=open('pyramen1.txt','w')       
-for key in report:
-    f.write(str(key)+' '+str(report[key])+'\n')   
-f.close()
+with open('pyramen2.txt','w') as f:       
+    for key in report:
+        f.write(str(key)+' '+str(report[key])+'\n')   
+
  
     
 
