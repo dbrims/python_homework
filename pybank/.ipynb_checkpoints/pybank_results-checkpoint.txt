@@ -1,7 +1,0 @@
-Financial Analysis
---------------------
-P&L for {86} month inclusive of Jan-2010 to Feb-2017
-Total P&L change: $671099
-Average Change in P&L: $7803.48
-Greatest Increase in Profits: $1170593 on Feb-2012
-Greatest Decrease in Profits: $-1196225 on Sep-2013
